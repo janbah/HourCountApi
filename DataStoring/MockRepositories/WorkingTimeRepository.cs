@@ -21,34 +21,34 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
             string sql = @"select
 
                 wt.id
-                ,wt.time_entry timeEntry
+                ,wt.time_entry zeitEintrag
                 ,wt.date
                 ,wt.comment
                 ,wt.employee_id
                 ,wt.category_id
 
-                ,e.id
-                ,e.name name
+                ,e.id --employeeId
+                ,e.name --employeeName
                 ,e.is_active
 
-                ,c.id
-                ,c.name name
+                ,c.id --categoryId
+                ,c.name --categoryName    
 
-                ,p.id
+                ,p.id --projectId
                 ,p.start_date startDate
                 ,p.end_date endDate
                 ,p.customer_id
                 ,p.fair_id
 
-                ,c2.id
-                ,c2.name
-                ,c2.long_name longname
+                ,c2.id --customerId
+                ,c2.name --customerName
+                ,c2.long_name longName
 
                 ,f.id
                 ,f.name
-                ,f.long_name longname
-                ,f.start_date startdate
-                ,f.end_date enddate
+                ,f.long_name longName
+                ,f.start_date startDate
+                ,f.end_date endDate
                 ,f.town
 
             from working_time wt
@@ -57,22 +57,24 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
             inner join project p on p.id = wt.project_id
             inner join customer c2 on c2.id = p.customer_id
             inner join fair f on f.id = p.fair_id";
+
+           // workingTimes = (List<WorkingTime>)_connection.Query(sql);
+
+             workingTimes = (List<WorkingTime>)_connection.Query<WorkingTime,Employee, Category, Project, Customer, Fair, WorkingTime>(
+                 sql, 
+                 (workingTime, employee, category, project, customer, fair) =>
+                 {
+                     workingTime.Employee = employee;
+                     workingTime.Category = category;
+                     workingTime.Project = project;
+                     workingTime.Project.Customer = customer;
+                     workingTime.Project.Fair = fair;
+                     
+                     return workingTime;
+                 },
+                 splitOn:"id, id, id, id, id"
             
-            workingTimes = (List<WorkingTime>)_connection.Query<WorkingTime,Employee, Category, Project, Customer, Fair, WorkingTime>(
-                sql, 
-                (workingTime, employee, category, project, customer, fair) =>
-                {
-                    workingTime.Employee = employee;
-                    workingTime.Category = category;
-                    workingTime.Project = project;
-                    workingTime.Project.Customer = customer;
-                    workingTime.Project.Fair = fair;
-                    
-                    return workingTime;
-                },
-                splitOn:"category_id, is_active, name, fair_id, longname"
-            
-            );
+             );
         }
         return workingTimes.AsQueryable();
     }
