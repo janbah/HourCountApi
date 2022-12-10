@@ -5,16 +5,22 @@ using Microsoft.Data.SqlClient;
 
 namespace DataStoring.Repositories;
 
-public class CategoryRepository :IRepository<Category> 
+public class CategoryRepository :IRepository<Category>
 {
+    private IDbConnection _connection;
+    public CategoryRepository(IDbConnection connection)
+    {
+        _connection = connection;
+    }
+
     public IQueryable<Category> Load()
     {
-        string connectionString = "Server=localhost;Database=hour_count;User Id=sa;Password=Holzwiese22;Encrypt=False;";
+        //string connectionString = "Server=localhost;Database=hour_count;User Id=sa;Password=Holzwiese22;Encrypt=False;";
 
         List<Category> categories = new List<Category>();
-        using (IDbConnection db = new SqlConnection(connectionString))
+        using (_connection)
         {
-            categories = db.Query<Category>("Select * From Category").ToList();
+            categories = _connection.Query<Category>("Select * From Category").ToList();
         }
         return categories.AsQueryable();
         
