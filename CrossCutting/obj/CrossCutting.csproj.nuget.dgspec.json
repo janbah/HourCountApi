@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj": {}
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj": {}
   },
   "projects": {
-    "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj": {
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj",
+        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj",
+        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj",
         "packagesPath": "/home/wir/.nuget/packages/",
-        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/obj/",
+        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wir/.nuget/NuGet/NuGet.Config"

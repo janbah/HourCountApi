@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "332tHSUmK/MUiGUtBQZxQrSGItZ1RNBuL2ELmaZoZxAhZMqJYjoMJNb/jigjkVQqlDnbgbErn/z0qlj87edvIQ==",
+  "dgSpecHash": "9mtqv5LLx3zJv9mFF4OMPd6E+5i95eUsJT3dh3GfOwkxpS6tOm3REvfB2e6Kf9wbci2TPj53x4qB6dYM93VvIQ==",
   "success": true,
-  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi.csproj",
+  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/HourCountApi.csproj",
   "expectedPackageFiles": [
     "/home/wir/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/home/wir/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

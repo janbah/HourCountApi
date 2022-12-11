@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ot9PW6YL9tgx9z9TgLyqgHHJAFXcHTJC45jjtYpVtdPCn92pXyBoYErpSOOuQ4DMqqtaiRmq1UUbL4qgy64nuQ==",
+  "dgSpecHash": "1prOJJf9n/p9MitYt1Huz5gmf5Wd/3bsf8q6jo2RgNTfqjX7zccu4SQqwYriQCRVRZ+KP0uowZADs5OjuEOx1g==",
   "success": true,
-  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj",
+  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj",
   "expectedPackageFiles": [
     "/home/wir/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/home/wir/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
