@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yfdAHloIbDP0Z1mjWk5TNuboJK5qjdHUdQOvuYKrb+tvkQj2wS0pmT3vKdLvHchlUij8mJa3IcBb1mJme2O5LQ==",
+  "dgSpecHash": "Fjp+74vND+7aHDyvlXFXMcZQWTxidLN39UxQdYAuC52LLZCZpj9tGPmaAojUhF4iFDuW1XI9lQyy/Fb0ue7jvw==",
   "success": true,
-  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj",
+  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,7 +1,6 @@
 using System.Data;
 using CrossCutting.DataObjects;
 using Dapper.FluentMap;
-using DataStoring.DapperMapping;
 using DataStoring.Repositories;
 using HourCountApi.ViewModels;
 using Microsoft.Data.SqlClient;
@@ -31,12 +30,6 @@ builder.Services.AddTransient<IDbConnection>((sp) =>
 var app = builder.Build();
 
 IConfiguration configuration = app.Configuration;
-
-FluentMapper.Initialize(config =>
-{
-    config.AddMap(new WorkingTimeMap());
-});
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
