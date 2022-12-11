@@ -5,7 +5,100 @@
     <projectFile profileName="IIS Express">HourCountApi/HourCountApi.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30f71239-d37a-4270-94f3-e06bebaee22d" name="Changes" comment="initial commit" />
+    <list default="true" id="30f71239-d37a-4270-94f3-e06bebaee22d" name="Changes" comment="refactor(project): cleanUp">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HourCountApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HourCountApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/bin/Debug/net6.0/CrossCutting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/bin/Debug/net6.0/CrossCutting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/bin/Debug/net6.0/CrossCutting.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/bin/Debug/net6.0/CrossCutting.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/CrossCutting.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/CrossCutting.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/Debug/net6.0/CrossCutting.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossCutting/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/CrossCutting/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/DapperMapping/WorkingTimeMap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/DataStoring.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/DataStoring.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/MockRepositories/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/DapperRepositories/CategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/MockRepositories/WorkingTimeRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/Repositories/CategoryMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/MockRepositories/CategoryMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/Repositories/CustomerMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/MockRepositories/CustomerMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/Repositories/FairMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/MockRepositories/FairMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/Repositories/ProjectMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/MockRepositories/ProjectMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/Repositories/WorkingTimeMockRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/MockRepositories/WorkingTimeMockRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/CrossCutting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/CrossCutting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/CrossCutting.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/CrossCutting.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/DataStoring.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/bin/Debug/net6.0/DataStoring.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/DataStoring.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/DataStoring.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/DataStoring.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/ref/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/ref/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/refint/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/Debug/net6.0/refint/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStoring/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataStoring/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/CrossCutting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/CrossCutting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/CrossCutting.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/CrossCutting.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/DataStoring.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/DataStoring.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/HourCountApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/HourCountApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/HourCountApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/HourCountApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/WorkingTimeManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/WorkingTimeManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/WorkingTimeManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/bin/Debug/net6.0/WorkingTimeManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/HourCountApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/ref/HourCountApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/ref/HourCountApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/refint/HourCountApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/Debug/net6.0/refint/HourCountApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/HourCountApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/HourCountApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountApi/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountApi/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/bin/Debug/net6.0/CoverletSourceRootsMapping" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/bin/Debug/net6.0/CoverletSourceRootsMapping" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/Debug/net6.0/HourCountTests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/HourCountTests.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/HourCountTests.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HourCountTests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/HourCountTests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/CrossCutting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/CrossCutting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/CrossCutting.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/CrossCutting.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/DataStoring.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/DataStoring.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/DataStoring.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/DataStoring.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/WorkingTimeManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/WorkingTimeManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/WorkingTimeManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/bin/Debug/net6.0/WorkingTimeManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/Debug/net6.0/WorkingTimeManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/WorkingTimeManagement.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/WorkingTimeManagement.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkingTimeManagement/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WorkingTimeManagement/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +213,8 @@
       <workItem from="1670583722286" duration="4273000" />
       <workItem from="1670685564071" duration="4246000" />
       <workItem from="1670748651434" duration="651000" />
+      <workItem from="1670755914331" duration="215000" />
+      <workItem from="1670769962681" duration="382000" />
     </task>
     <task id="LOCAL-00001" summary="add Mssql Repository for Categories">
       <created>1669663750008</created>
@@ -156,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670749293032</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor(project): cleanUp">
+      <created>1670770340810</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670770340810</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,19 +316,20 @@
     <MESSAGE value="feat(Repositories): finish mapping wt" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="refactor(project): cleanUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(project): cleanUp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataStoring/MockRepositories/CategoryRepository.cs</url>
+          <url>file://$PROJECT_DIR$/DataStoring/DapperRepositories/CategoryRepository.cs</url>
           <line>17</line>
           <properties documentPath="$PROJECT_DIR$/DataStoring/Repositories/CategoryRepository.cs" initialLine="11" containingFunctionPresentation="method 'Load'" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataStoring/MockRepositories/WorkingTimeRepository.cs</url>
+          <url>file://$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs</url>
           <line>78</line>
           <properties documentPath="$PROJECT_DIR$/DataStoring/Repositories/WorkingTimeRepository.cs" initialLine="43" containingFunctionPresentation="method 'Load'" />
           <option name="timeStamp" value="8" />

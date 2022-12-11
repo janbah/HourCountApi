@@ -21,7 +21,7 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
             string sql = @"select
 
                 wt.id
-                ,wt.time_entry zeitEintrag
+                ,wt.time_entry timeEntry
                 ,wt.date
                 ,wt.comment
                 ,wt.employee_id

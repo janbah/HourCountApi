@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sSisqxZyay1EnkqCTFrYrHpMyQnTnkoG9MFjSnbiGVlCmnzP03eVry5PMgq9GCSEvK+IO4AfpjDz/DVgN0HYng==",
+  "dgSpecHash": "BR1ZNaML5JVUzQFDat0bkJazY8Du63+yLq1LzzPabLHzTaUP2LPYTStKUojGcBBoB6Oy6FabB8C35tg/yGVXKg==",
   "success": true,
-  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
+  "projectFilePath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
   "expectedPackageFiles": [
     "/home/wir/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/home/wir/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

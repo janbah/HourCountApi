@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi.csproj": {}
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/HourCountApi.csproj": {}
   },
   "projects": {
-    "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj": {
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj",
+        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj",
         "projectName": "CrossCutting",
-        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj",
+        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj",
         "packagesPath": "/home/wir/.nuget/packages/",
-        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/obj/",
+        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wir/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj": {
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj",
+        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj",
         "projectName": "DataStoring",
-        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj",
+        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj",
         "packagesPath": "/home/wir/.nuget/packages/",
-        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/DataStoring/obj/",
+        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wir/.nuget/NuGet/NuGet.Config"
@@ -79,8 +79,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj": {
-                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj"
+              "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj": {
+                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi.csproj": {
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/HourCountApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi.csproj",
+        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/HourCountApi.csproj",
         "projectName": "HourCountApi",
-        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi.csproj",
+        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/HourCountApi.csproj",
         "packagesPath": "/home/wir/.nuget/packages/",
-        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/obj/",
+        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/HourCountApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wir/.nuget/NuGet/NuGet.Config"
@@ -154,11 +154,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj": {
-                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/CrossCutting/CrossCutting.csproj"
+              "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj": {
+                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/CrossCutting/CrossCutting.csproj"
               },
-              "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj": {
-                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj"
+              "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj": {
+                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj"
               }
             }
           }
@@ -201,14 +201,14 @@
         }
       }
     },
-    "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj": {
+    "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
+        "projectUniqueName": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
         "projectName": "WorkingTimeManagement",
-        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
+        "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/WorkingTimeManagement.csproj",
         "packagesPath": "/home/wir/.nuget/packages/",
-        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/WorkingTimeManagement/obj/",
+        "outputPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/WorkingTimeManagement/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/wir/.nuget/NuGet/NuGet.Config"
@@ -223,8 +223,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj": {
-                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/DataStoring/DataStoring.csproj"
+              "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj": {
+                "projectPath": "/home/wir/Projekte/ASP/HourCountApi/HourCountApi/DataStoring/DataStoring.csproj"
               }
             }
           }
