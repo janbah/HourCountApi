@@ -81,7 +81,11 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
 
     public void Insert(WorkingTimeDto workingTimeDto)
     {
-        throw new NotImplementedException();
+        using (_connection)
+        {
+            string sql = "insert into working_time (date, time_entry, project_id, category_id, employee_id, comment) values (@Date, @TimeEntry, @ProjectId, @CategoryId, @EmployeeId, @Comment)";
+            int rowsAffected = _connection.Execute(sql, workingTimeDto);
+        }
     }
 
     public void Update(WorkingTimeDto workingTimeDto)
@@ -91,6 +95,10 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
 
     public void Delete(int id)
     {
-        throw new NotImplementedException();
+        using (_connection)
+        {
+            string sql = "delete from working_time where id = @Id";
+            int rowsAffected = _connection.Execute(sql, new{Id = id});
+        }
     }
 }

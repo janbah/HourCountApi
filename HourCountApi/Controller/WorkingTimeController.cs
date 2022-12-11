@@ -5,9 +5,9 @@ using WorkingTimeManagement;
 
 namespace HourCountApi.Controllers;
 
-//[ApiController]
+[ApiController]
 
-//[Route("[controller]")]
+[Route("api/[controller]")]
 public class WorkingTimeController : ControllerBase
 {
     private readonly ILogger<WorkingTimeController> _logger;
@@ -33,14 +33,51 @@ public class WorkingTimeController : ControllerBase
         var workingTimes = _workingTimeManager.GetWorkingTime(selectedDate, martin);
         return _adapter.ToWorkingTimeViewModels(workingTimes);
     }
-    
-    [HttpGet]
-    [Route("WorkingTimeTest")]
-    public IEnumerable<WorkingTimeViewModel> GetWorkingTimeTest()
+
+    [HttpPost]
+    [Route("WorkingTime")]
+    public async Task<ActionResult> InsertWorkingTime(WorkingTimeDto workingTimeDto)
     {
-        var workingTimes = _workingTimeManager.GetWorkingTimeTest();
-        return _adapter.ToWorkingTimeViewModels(workingTimes);
+        try
+        {
+            if (workingTimeDto == null)
+            {
+                return BadRequest();
+            }
+
+            _workingTimeManager.Add(workingTimeDto);
+
+             return StatusCode(StatusCodes.Status201Created, "Created new workingTime Record");
+        }
+        
+        catch (Exception e)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record");
+        }
     }
+
+    [HttpDelete]
+    public ActionResult DeleteWorkingTime(int id)
+    {
+        try
+        {
+            if (id == null)
+            {
+                return BadRequest();
+            }
+
+            _workingTimeManager.Delete(id);
+            return StatusCode(StatusCodes.Status202Accepted, "Deleting workingTime record");
+
+        }
+
+        catch (Exception e)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting workingTime record");
+        }
+    
+
+}
     
     [HttpGet]
     [Route("CurrentWorkingTimes")]

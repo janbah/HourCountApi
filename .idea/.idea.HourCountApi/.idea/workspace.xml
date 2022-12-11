@@ -310,6 +310,32 @@
           <properties documentPath="$PROJECT_DIR$/DataStoring/Repositories/WorkingTimeRepository.cs" initialLine="43" containingFunctionPresentation="method 'Load'" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs</url>
+          <line>82</line>
+          <properties documentPath="$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs" initialLine="82" containingFunctionPresentation="method 'Insert'">
+            <startOffsets>
+              <option value="2536" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2537" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs</url>
+          <line>98</line>
+          <properties documentPath="$PROJECT_DIR$/DataStoring/DapperRepositories/WorkingTimeRepository.cs" initialLine="98" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="3045" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3046" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
