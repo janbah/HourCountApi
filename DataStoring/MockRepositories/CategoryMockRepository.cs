@@ -27,7 +27,7 @@ public class CategoryMockRepository : IRepository<Category>
         return categoryList.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         throw new NotImplementedException();
     }

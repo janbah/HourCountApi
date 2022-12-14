@@ -27,7 +27,7 @@ public class WorkingTimeManager : IWorkingTimeManager
         return _workingTimeRepo.Load().FirstOrDefault();
     }
 
-    public List<WorkingTime> GetWorkingTime(DateTime date, Employee employee)
+    public List<WorkingTime> GetWorkingTimesByDate(DateTime date, Employee employee)
     {
         return _workingTimeRepo.Load()
             .Where(w => 
@@ -58,9 +58,9 @@ public class WorkingTimeManager : IWorkingTimeManager
         return _projectRepo.Load();
     }
 
-    public void Add(WorkingTimeDto workingTimeDto)
+    public int Add(WorkingTimeDto workingTimeDto)
     {
-        _workingTimeRepo.Insert(workingTimeDto);
+        return _workingTimeRepo.Insert(workingTimeDto);
     }
 
     public void Update(WorkingTimeDto workingTimeDto)
@@ -73,8 +73,8 @@ public class WorkingTimeManager : IWorkingTimeManager
         _workingTimeRepo.Delete(id);
     }
 
-    public IEnumerable<WorkingTime> GetWorkingTimeTest()
+    public WorkingTime GetWorkingTime(int id)
     {
-        return _workingTimeRepo.Load();
+        return _workingTimeRepo.Load().Where(w => w.Id == id).FirstOrDefault();
     }
 }

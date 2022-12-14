@@ -102,12 +102,13 @@ public class WorkingTimeMockRepository : IRepository<WorkingTime>
         return workingTimes.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         Console.WriteLine("Insert to Datastore");
         // WorkingTime wt = new();
         // wt.Id = workingTimes.Count + 1;
         // wt.TimeEntry = Convert.ToDecimal(workingTimeDto.TimeEntry);
+        return 1;
     }
 
     public void Update(WorkingTimeDto workingTimeDto)
@@ -117,6 +118,6 @@ public class WorkingTimeMockRepository : IRepository<WorkingTime>
 
     public void Delete(int id)
     {
-        Console.WriteLine("Delete entry from Datastore");
+        Console.WriteLine("Delete entry in Datastore");
     }
 }

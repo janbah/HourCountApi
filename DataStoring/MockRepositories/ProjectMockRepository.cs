@@ -41,7 +41,7 @@ public class ProjectMockRepository : IRepository<Project>
         return projectList.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         throw new NotImplementedException();
     }

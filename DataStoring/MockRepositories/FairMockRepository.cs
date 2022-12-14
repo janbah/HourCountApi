@@ -30,7 +30,7 @@ public class FairMockRepository : IRepository<Fair>
         return fairs.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         throw new NotImplementedException();
     }

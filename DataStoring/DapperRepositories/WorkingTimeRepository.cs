@@ -79,12 +79,16 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
         return workingTimes.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         using (_connection)
         {
-            string sql = "insert into working_time (date, time_entry, project_id, category_id, employee_id, comment) values (@Date, @TimeEntry, @ProjectId, @CategoryId, @EmployeeId, @Comment)";
-            int rowsAffected = _connection.Execute(sql, workingTimeDto);
+            string sql = @"
+                    insert into working_time (date, time_entry, project_id, category_id, employee_id, comment)  
+                    values (@Date, @TimeEntry, @ProjectId, @CategoryId, @EmployeeId, @Comment);
+                    SELECT CAST (SCOPE_IDENTITY() AS int )
+                    ";
+            return _connection.ExecuteScalarAsync<int>(sql, workingTimeDto).Result;
         }
     }
 

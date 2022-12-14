@@ -25,12 +25,19 @@ public class WorkingTimeController : ControllerBase
         _workingTimeManager = workingTimeManager;
         _adapter = adapter;
     }
-
+    
     [HttpGet]
     [Route("WorkingTime")]
-    public IEnumerable<WorkingTimeViewModel> GetWorkingTime(DateTime selectedDate)
+    public WorkingTime GetWorkingTime(int id)
     {
-        var workingTimes = _workingTimeManager.GetWorkingTime(selectedDate, martin);
+        return _workingTimeManager.GetWorkingTime(id);
+    }
+
+    [HttpGet]
+    [Route("WorkingTimeByDate")]
+    public IEnumerable<WorkingTimeViewModel> GetWorkingTimesByDate(DateTime selectedDate)
+    {
+        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, martin);
         return _adapter.ToWorkingTimeViewModels(workingTimes);
     }
 
@@ -45,9 +52,8 @@ public class WorkingTimeController : ControllerBase
                 return BadRequest();
             }
 
-            _workingTimeManager.Add(workingTimeDto);
-
-             return StatusCode(StatusCodes.Status201Created, "Created new workingTime Record");
+            int id = _workingTimeManager.Add(workingTimeDto);
+            return CreatedAtAction(nameof(GetWorkingTime), new { id, workingTimeDto });
         }
         
         catch (Exception e)
@@ -83,7 +89,7 @@ public class WorkingTimeController : ControllerBase
     [Route("CurrentWorkingTimes")]
     public IEnumerable<WorkingTimeViewModel> GetCurrentWorkingTime()
     {
-        var workingTimes = _workingTimeManager.GetWorkingTime(new DateTime(2022,4,28), martin);
+        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(new DateTime(2022,4,28), martin);
         return _adapter.ToWorkingTimeViewModels(workingTimes);
     }
     

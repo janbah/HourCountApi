@@ -26,7 +26,7 @@ public class CategoryRepository :IRepository<Category>
         
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         throw new NotImplementedException();
     }

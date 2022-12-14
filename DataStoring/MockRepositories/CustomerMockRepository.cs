@@ -31,7 +31,7 @@ public class CustomerMockRepository : IRepository<Customer>
         return new List<Customer>() { customer1, customer2, customer3 }.AsQueryable();
     }
 
-    public void Insert(WorkingTimeDto workingTimeDto)
+    public int Insert(WorkingTimeDto workingTimeDto)
     {
         throw new NotImplementedException();
     }
