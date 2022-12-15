@@ -15,8 +15,6 @@ public class ProjectMockRepository : IRepository<Project>
 
     public IQueryable<Project> Load()
     {
-        
-        
         Project project1 = new()
         {
             Id = 1,

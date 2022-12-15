@@ -5,8 +5,8 @@ namespace WorkingTimeManagement;
 
 public interface IWorkingTimeManager
 {
-    List<WorkingTime> GetWorkingTimesByDate(DateTime date, Employee employee);
-    List<WorkingTimeSum> GetWorkingTimeOverView(Employee employee);
+    List<WorkingTime> GetWorkingTimesByDate(DateTime date, int employeeId);
+    List<WorkingTimeSum> GetWorkingTimeOverView(int employeeId);
     IQueryable<Category> GetCategoryItems();
     IQueryable<Project> GetProjectItems();
     int Add(WorkingTimeDto workingTimeDto);

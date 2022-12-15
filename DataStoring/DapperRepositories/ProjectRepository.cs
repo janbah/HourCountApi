@@ -1,23 +1,23 @@
 using System.Data;
 using CrossCutting.DataObjects;
 using Dapper;
-using Microsoft.Data.SqlClient;
 
 namespace DataStoring.Repositories;
 
-public class CategoryRepository :IRepository<Category>
+public class ProjectRepository :IRepository<Project>
 {
     private IDbConnection _connection;
-    public CategoryRepository(IDbConnection connection)
+
+    public ProjectRepository(IDbConnection connection)
     {
         _connection = connection;
     }
 
-    public IQueryable<Category> Load()
+    public IQueryable<Project> Load()
     {
         using (_connection)
         {
-            return _connection.Query<Category>("Select * From Category").AsQueryable();
+            return _connection.Query<Project>("SELECT * FROM project").AsQueryable();
         }
     }
 

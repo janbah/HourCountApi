@@ -1,6 +1,7 @@
 using System.Data;
 using CrossCutting.DataObjects;
 using Dapper;
+using Dapper.Contrib.Extensions;
 
 namespace DataStoring.Repositories;
 
@@ -94,14 +95,16 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
 
     public void Update(WorkingTimeDto workingTimeDto)
     {
-        throw new NotImplementedException();
+        const string sql = @"
+                    update working_time set time_entry = @TimeEntry, project_id = @ProjectId, category_id = @CategoryId, employee_id = @EmployeeId, comment = @Comment where id = @Id";
+        _connection.Execute(sql, workingTimeDto);
     }
 
     public void Delete(int id)
     {
         using (_connection)
         {
-            string sql = "delete from working_time where id = @Id";
+            const string sql = "delete from working_time where id = @Id";
             int rowsAffected = _connection.Execute(sql, new{Id = id});
         }
     }

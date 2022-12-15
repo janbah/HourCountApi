@@ -27,25 +27,25 @@ public class WorkingTimeManager : IWorkingTimeManager
         return _workingTimeRepo.Load().FirstOrDefault();
     }
 
-    public List<WorkingTime> GetWorkingTimesByDate(DateTime date, Employee employee)
+    public List<WorkingTime> GetWorkingTimesByDate(DateTime date, int employeeId)
     {
         return _workingTimeRepo.Load()
             .Where(w => 
-                w.Employee.Name == employee.Name &&
+                w.Employee.Id == employeeId &&
                 w.Date == date
                 )
             .ToList();
     }
 
-    public List<WorkingTimeSum> GetWorkingTimeOverView(Employee employee)
+    public List<WorkingTimeSum> GetWorkingTimeOverView(int employeeId)
     {
         var result = _workingTimeRepo.Load()
-            .Where(w=>w.Employee.Name == employee.Name)
+            .Where(w=>w.Employee.Id == employeeId)
             .GroupBy(w => w.Date
                 , (date, entry) => new WorkingTimeSum(date, entry.Sum(e=>e.TimeEntry)))
             .ToList();
         
-        return result;
+        return result;    
     }
 
     public IQueryable<Category> GetCategoryItems()

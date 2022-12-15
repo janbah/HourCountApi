@@ -13,12 +13,7 @@ public class WorkingTimeController : ControllerBase
     private readonly ILogger<WorkingTimeController> _logger;
     private readonly IWorkingTimeManager _workingTimeManager;
     private readonly WorkingTimeAdapter _adapter;
-
-    private Employee martin = new Employee()
-    {
-        Name = "Martin"
-    };
-
+    
     public WorkingTimeController(ILogger<WorkingTimeController> logger, IWorkingTimeManager workingTimeManager, WorkingTimeAdapter adapter)
     {
         _logger = logger;
@@ -37,7 +32,7 @@ public class WorkingTimeController : ControllerBase
     [Route("WorkingTimeByDate")]
     public IEnumerable<WorkingTimeViewModel> GetWorkingTimesByDate(DateTime selectedDate)
     {
-        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, martin);
+        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, 1);
         return _adapter.ToWorkingTimeViewModels(workingTimes);
     }
 
@@ -62,6 +57,27 @@ public class WorkingTimeController : ControllerBase
         }
     }
 
+    [HttpPut]
+    [Route("WorkingTime")]
+    public async Task<ActionResult> UpdateWorkingTime(WorkingTimeDto workingTimeDto)
+    {
+        try
+        {
+            if (workingTimeDto == null)
+            {
+                return BadRequest();
+            }
+            _workingTimeManager.Update(workingTimeDto);
+            return Ok(workingTimeDto);
+        }
+        
+        catch (Exception e)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record");
+        }
+    }
+
+    
     [HttpDelete]
     public ActionResult DeleteWorkingTime(int id)
     {
@@ -74,29 +90,17 @@ public class WorkingTimeController : ControllerBase
 
             _workingTimeManager.Delete(id);
             return StatusCode(StatusCodes.Status202Accepted, "Deleting workingTime record");
-
         }
-
         catch (Exception e)
         {
             return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting workingTime record");
-        }
-    
-
-}
-    
-    [HttpGet]
-    [Route("CurrentWorkingTimes")]
-    public IEnumerable<WorkingTimeViewModel> GetCurrentWorkingTime()
-    {
-        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(new DateTime(2022,4,28), martin);
-        return _adapter.ToWorkingTimeViewModels(workingTimes);
+        } 
     }
     
     [HttpGet]
     [Route("WorkingTimeSum")]
     public IEnumerable<WorkingTimeSum> GetWorkingTimeSum()
     {
-        return this._workingTimeManager.GetWorkingTimeOverView(martin);
+        return this._workingTimeManager.GetWorkingTimeOverView(1);
     }
 }
