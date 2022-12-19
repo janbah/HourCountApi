@@ -13,4 +13,5 @@ public interface IWorkingTimeManager
     void Update(WorkingTimeDto workingTimeDto);
     void Delete(int id);
     WorkingTime GetWorkingTime(int id);
+    IQueryable<WorkingTime> GetAll();
 }

@@ -1,7 +1,6 @@
 using System.Data;
 using CrossCutting.DataObjects;
 using Dapper;
-using Dapper.Contrib.Extensions;
 
 namespace DataStoring.Repositories;
 

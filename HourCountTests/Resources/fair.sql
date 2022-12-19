@@ -1,0 +1,3 @@
+INSERT INTO hour_count_test.dbo.fair (id, name, town, start_date, end_date, long_name) VALUES (1, N'HMI', N'Hannover', N'2022-01-01 00:00:00.0000000', N'2022-01-05 00:00:00.0000000', N'Hannover Messe Industrie');
+INSERT INTO hour_count_test.dbo.fair (id, name, town, start_date, end_date, long_name) VALUES (2, N'Automechanica', N'Frankfurt', N'2022-02-01 00:00:00.0000000', N'2022-02-05 00:00:00.0000000', N'');
+INSERT INTO hour_count_test.dbo.fair (id, name, town, start_date, end_date, long_name) VALUES (3, N'Hi-Tech', N'Dortmund', N'2022-03-01 00:00:00.0000000', N'2022-03-05 00:00:00.0000000', N'');

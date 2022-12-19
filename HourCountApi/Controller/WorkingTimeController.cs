@@ -7,7 +7,7 @@ namespace HourCountApi.Controllers;
 
 [ApiController]
 
-[Route("api/[controller]")]
+[Route("api/working-times")]
 public class WorkingTimeController : ControllerBase
 {
     private readonly ILogger<WorkingTimeController> _logger;
@@ -20,19 +20,25 @@ public class WorkingTimeController : ControllerBase
         _workingTimeManager = workingTimeManager;
         _adapter = adapter;
     }
+
+    // [HttpGet]
+    // [Route("GetAll")]
+    // public List<WorkingTime> GetAll()
+    // {
+    //     return _workingTimeManager.GetAll().ToList();
+    // }
     
     [HttpGet]
-    [Route("WorkingTime")]
+    [Route("{id}")]
     public WorkingTime GetWorkingTime(int id)
     {
         return _workingTimeManager.GetWorkingTime(id);
     }
 
     [HttpGet]
-    [Route("WorkingTimeByDate")]
-    public IEnumerable<WorkingTimeViewModel> GetWorkingTimesByDate(DateTime selectedDate)
+    public IEnumerable<WorkingTimeViewModel> GetWorkingTimes(int employeeId, DateTime selectedDate)
     {
-        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, 1);
+        var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, employeeId);
         return _adapter.ToWorkingTimeViewModels(workingTimes);
     }
 
@@ -79,6 +85,8 @@ public class WorkingTimeController : ControllerBase
 
     
     [HttpDelete]
+    [Route("{id}")]
+
     public ActionResult DeleteWorkingTime(int id)
     {
         try
