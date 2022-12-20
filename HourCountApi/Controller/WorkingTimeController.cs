@@ -56,7 +56,6 @@ public class WorkingTimeController : ControllerBase
     }
 
     [HttpPut]
-    [Route("WorkingTime")]
     public async Task<ActionResult> UpdateWorkingTime(WorkingTimeDto workingTimeDto)
     {
         try

@@ -118,24 +118,64 @@ public class WorkingTimeControllerTest
             TimeEntry = 7
         };
 
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        dictionary.Add(nameof(workingTimeDto.EmployeeId),"1");
-        dictionary.Add(nameof(workingTimeDto.CategoryId),"1");
-        dictionary.Add(nameof(workingTimeDto.Date),"2022-12-14");
-        dictionary.Add(nameof(workingTimeDto.Comment),"test");
-        dictionary.Add(nameof(workingTimeDto.ProjectId),"2");
-        dictionary.Add(nameof(workingTimeDto.TimeEntry),"7");
-
-        var content = new FormUrlEncodedContent(dictionary);
-        
         //Act
-        //JsonContent jsonContent = new JsonContent(workingTimeDto);
         await _client.PostAsJsonAsync("api/working-times", workingTimeDto );
 
+        //Assert
         Database database = new Database();
         var result = database.GetWorkingTimes().Count();
-        
-        //Assert
         Assert.AreEqual(5,result);
+    }
+    
+    [TestMethod]
+    public async Task InsertDecimalEntry4Point5_EntryIsStoredCorrectly()
+    {
+        //Arrange
+        WorkingTimeDto workingTimeDto = new WorkingTimeDto()
+        {
+            EmployeeId = 1,
+            CategoryId = 1,
+            Date = new DateTime(2022, 12, 14),
+            Comment = "test",
+            ProjectId = 2,
+            TimeEntry = 4.5
+        };
+
+        //Act
+        await _client.PostAsJsonAsync("api/working-times", workingTimeDto );
+
+        //Assert
+        Database database = new Database();
+        var result = database.GetWorkingTimes().Last();
+        Assert.AreEqual((decimal)4.5,result.TimeEntry);
+    }
+
+    
+    [TestMethod]
+    public async Task UpdateWorkingTime_EntryIsUpdated()
+    {
+        //Arrange
+        WorkingTimeDto workingTimeDto = new WorkingTimeDto()
+        {
+            Id = 1,
+            EmployeeId = 2,
+            CategoryId = 2,
+            Date = new DateTime(),
+            Comment = "update",
+            ProjectId = 2,
+            TimeEntry = 4
+        };
+
+        //Act
+        await _client.PutAsJsonAsync("api/working-times", workingTimeDto );
+
+        //Assert
+        Database database = new Database();
+        var result = database.GetWorkingTimes().First(wt => wt.Id == 1);
+        Assert.AreEqual(2,result.Employee.Id);
+        Assert.AreEqual(2,result.Category.Id);
+        Assert.AreEqual(2,result.Project.Id);
+        Assert.AreEqual("update",result.Comment);
+        Assert.AreEqual(4,result.TimeEntry);
     }
 }
