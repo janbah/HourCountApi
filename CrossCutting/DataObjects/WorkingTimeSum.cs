@@ -1,4 +1,4 @@
-namespace HourCountApi.ViewModels;
+namespace CrossCutting.DataObjects;
 
 public class WorkingTimeSum
 {

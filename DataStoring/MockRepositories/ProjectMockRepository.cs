@@ -1,6 +1,8 @@
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
+using DataStoring.RepositoryContracts;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.MockRepositories;
 
 public class ProjectMockRepository : IRepository<Project>
 {

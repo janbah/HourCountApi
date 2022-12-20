@@ -2,7 +2,7 @@ using CrossCutting.DataObjects;
 using Microsoft.AspNetCore.Mvc;
 using WorkingTimeManagement;
 
-namespace HourCountApi.Controllers;
+namespace HourCountApi.Controller;
 
 [ApiController]
 [Route("api/[controller]")]

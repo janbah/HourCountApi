@@ -1,5 +1,5 @@
 using CrossCutting.DataObjects;
-using DataStoring.Repositories;
+using DataStoring.RepositoryContracts;
 
 namespace WorkingTimeManagement;
 

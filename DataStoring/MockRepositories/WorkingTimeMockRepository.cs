@@ -1,16 +1,18 @@
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
+using DataStoring.RepositoryContracts;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.MockRepositories;
 
 public class WorkingTimeMockRepository : IRepository<WorkingTime>
 {
-    private List<WorkingTime> workingTimes;
-    private IRepository<Project> _projectRepo;
+    private readonly List<WorkingTime> _workingTimes;
+    private readonly IRepository<Project> _projectRepo;
 
     public WorkingTimeMockRepository(IRepository<Project> projectRepo)
     {
         _projectRepo = projectRepo;
-        workingTimes = createWorkingTimes();
+        _workingTimes = createWorkingTimes();
     }
 
     private List<WorkingTime> createWorkingTimes()
@@ -99,7 +101,7 @@ public class WorkingTimeMockRepository : IRepository<WorkingTime>
 
     public IQueryable<WorkingTime> Load()
     {
-        return workingTimes.AsQueryable();
+        return _workingTimes.AsQueryable();
     }
 
     public int Insert(WorkingTimeDto workingTimeDto)

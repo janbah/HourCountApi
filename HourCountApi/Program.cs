@@ -1,7 +1,8 @@
 using System.Data;
 using CrossCutting.DataObjects;
-using Dapper.FluentMap;
-using DataStoring.Repositories;
+using DataStoring.DapperRepositories;
+using DataStoring.MockRepositories;
+using DataStoring.RepositoryContracts;
 using HourCountApi.ViewModels;
 using Microsoft.Data.SqlClient;
 using WorkingTimeManagement;
@@ -23,13 +24,11 @@ builder.Services.AddTransient<IWorkingTimeManager,WorkingTimeManager>();
 builder.Services.AddTransient<WorkingTimeAdapter>();
 
 string connectionString = builder.Configuration.GetConnectionString("dbConnection");
-builder.Services.AddTransient<IDbConnection>((sp) => 
+builder.Services.AddTransient<IDbConnection>((_) => 
     new SqlConnection(connectionString)
 );
 
 var app = builder.Build();
-
-IConfiguration configuration = app.Configuration;
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -41,7 +40,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader()
-    .SetIsOriginAllowed(origin => true) // allow any origin
+    .SetIsOriginAllowed(_ => true) // allow any origin
     .AllowCredentials()); // allow credentials
 
 app.UseHttpsRedirection();

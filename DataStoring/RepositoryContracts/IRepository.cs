@@ -1,6 +1,6 @@
-using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.RepositoryContracts;
 
 public interface IRepository<T>
 {

@@ -1,4 +1,4 @@
-namespace CrossCutting.DataObjects;
+namespace CrossCutting.DataTransferObjects;
 
 public class WorkingTimeDto
 {

@@ -1,27 +1,21 @@
-using System.Data;
-using System.Data.Common;
 using System.Net.Http.Json;
 using CrossCutting.DataObjects;
-using DataStoring.Repositories;
-using HourCountApi.Controllers;
-using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Data.SqlClient;
+using CrossCutting.DataTransferObjects;
 using Newtonsoft.Json;
 
-namespace HourCountTests;
+namespace HourCountTests.WorkingTimeController;
 
 [TestClass]
 public class WorkingTimeControllerTest
 {
-    private  CustomWorkingTimeApiFactory<WorkingTimeController> _api;
-    private  HttpClient _client;
-    private Database _database = default!;
+    private readonly HttpClient _client;
+    private readonly Database _database;
 
 
     public WorkingTimeControllerTest()
     {
-        _api = new CustomWorkingTimeApiFactory<WorkingTimeController>();
-        _client = _api.Client;
+        var api = new CustomWorkingTimeApiFactory();
+        _client = api.Client;
         _database = new Database();
         //_database.ResetDatabase();
     }
@@ -98,7 +92,7 @@ public class WorkingTimeControllerTest
         await _client.DeleteAsync("api/working-times/2");
 
         Database database = new Database();
-        var result = database.GetWorkingTimes().Where(w=>w.Id==2).Count();
+        var result = database.GetWorkingTimes().Count(w => w.Id==2);
         
         //Assert
         Assert.AreEqual(0,result);

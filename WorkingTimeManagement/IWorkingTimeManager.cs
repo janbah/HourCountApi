@@ -1,5 +1,5 @@
 using CrossCutting.DataObjects;
-using HourCountApi.ViewModels;
+using CrossCutting.DataTransferObjects;
 
 namespace WorkingTimeManagement;
 

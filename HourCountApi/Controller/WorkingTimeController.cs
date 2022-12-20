@@ -1,9 +1,10 @@
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
 using HourCountApi.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using WorkingTimeManagement;
 
-namespace HourCountApi.Controllers;
+namespace HourCountApi.Controller;
 
 [ApiController]
 
@@ -36,41 +37,32 @@ public class WorkingTimeController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> InsertWorkingTime(WorkingTimeDto workingTimeDto)
+    public Task<ActionResult> InsertWorkingTime(WorkingTimeDto workingTimeDto)
     {
         try
         {
-            if (workingTimeDto == null)
-            {
-                return BadRequest();
-            }
-
             int id = _workingTimeManager.Add(workingTimeDto);
-            return CreatedAtAction(nameof(GetWorkingTime), new { id, workingTimeDto });
+            return Task.FromResult<ActionResult>(CreatedAtAction(nameof(GetWorkingTime), new { id, workingTimeDto }));
         }
         
-        catch (Exception e)
+        catch (Exception)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record");
+            return Task.FromResult<ActionResult>(StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record"));
         }
     }
 
     [HttpPut]
-    public async Task<ActionResult> UpdateWorkingTime(WorkingTimeDto workingTimeDto)
+    public Task<ActionResult> UpdateWorkingTime(WorkingTimeDto workingTimeDto)
     {
         try
         {
-            if (workingTimeDto == null)
-            {
-                return BadRequest();
-            }
             _workingTimeManager.Update(workingTimeDto);
-            return Ok(workingTimeDto);
+            return Task.FromResult<ActionResult>(Ok(workingTimeDto));
         }
         
-        catch (Exception e)
+        catch (Exception)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record");
+            return Task.FromResult<ActionResult>(StatusCode(StatusCodes.Status500InternalServerError, "Error creating new workingTime record"));
         }
     }
 
@@ -82,15 +74,10 @@ public class WorkingTimeController : ControllerBase
     {
         try
         {
-            if (id == null)
-            {
-                return BadRequest();
-            }
-
             _workingTimeManager.Delete(id);
             return StatusCode(StatusCodes.Status202Accepted, "Deleting workingTime record");
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting workingTime record");
         } 

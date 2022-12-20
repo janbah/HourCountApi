@@ -1,6 +1,8 @@
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
+using DataStoring.RepositoryContracts;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.MockRepositories;
 
 public class CustomerMockRepository : IRepository<Customer>
 {
@@ -10,7 +12,7 @@ public class CustomerMockRepository : IRepository<Customer>
         Customer customer1 = new Customer()
         {
             Id = 0,
-            Name = "Enercon Windcraft GmbH",
+            Name = "Enercon Windkraft GmbH",
             LongName = "Enercon"
         };
 

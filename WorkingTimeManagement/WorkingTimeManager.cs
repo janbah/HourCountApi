@@ -1,6 +1,6 @@
 ﻿using CrossCutting.DataObjects;
-using DataStoring.Repositories;
-using HourCountApi.ViewModels;
+using CrossCutting.DataTransferObjects;
+using DataStoring.RepositoryContracts;
 
 namespace WorkingTimeManagement;
 
@@ -20,11 +20,6 @@ public class WorkingTimeManager : IWorkingTimeManager
     public IQueryable<WorkingTime> GetAll()
     {
         return _workingTimeRepo.Load();
-    }
-
-    public WorkingTime GetFirst()
-    {
-        return _workingTimeRepo.Load().FirstOrDefault();
     }
 
     public List<WorkingTime> GetWorkingTimesByDate(DateTime date, int employeeId)
@@ -75,6 +70,7 @@ public class WorkingTimeManager : IWorkingTimeManager
 
     public WorkingTime GetWorkingTime(int id)
     {
-        return _workingTimeRepo.Load().Where(w => w.Id == id).FirstOrDefault();
+        
+        return _workingTimeRepo.Load().FirstOrDefault(w => w.Id == id) ?? throw new InvalidOperationException();
     }
 }

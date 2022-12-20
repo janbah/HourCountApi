@@ -1,13 +1,14 @@
 using System.Data;
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
 using Dapper;
-using Microsoft.Data.SqlClient;
+using DataStoring.RepositoryContracts;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.DapperRepositories;
 
 public class CategoryRepository :IRepository<Category>
 {
-    private IDbConnection _connection;
+    private readonly IDbConnection _connection;
     public CategoryRepository(IDbConnection connection)
     {
         _connection = connection;

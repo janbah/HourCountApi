@@ -1,8 +1,10 @@
 using System.Data;
 using CrossCutting.DataObjects;
+using CrossCutting.DataTransferObjects;
 using Dapper;
+using DataStoring.RepositoryContracts;
 
-namespace DataStoring.Repositories;
+namespace DataStoring.DapperRepositories;
 
 public class ProjectRepository :IRepository<Project>
 {
