@@ -1,5 +1,6 @@
 using System.Data;
 using System.Data.Common;
+using Dapper;
 using HourCountApi.Controllers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -13,14 +14,10 @@ namespace HourCountTests;
 
 public class CustomWorkingTimeApiFactory<T> : WebApplicationFactory<WorkingTimeController>
 {
-    private DbConnection _dbConnection = default!;
+    private readonly string connectionString = "Server=localhost;Database=hour_count_test;User Id=sa;Password=Holzwiese22;Encrypt=False;";
 
     public CustomWorkingTimeApiFactory()
     {
-        string connectionString = "Server=localhost;Database=hour_count_test;User Id=sa;Password=Holzwiese22;Encrypt=False;";
-
-        _dbConnection = new SqlConnection(connectionString);
-        _dbConnection.Open();
         Client = CreateClient();
     }
 
@@ -28,12 +25,15 @@ public class CustomWorkingTimeApiFactory<T> : WebApplicationFactory<WorkingTimeC
     
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        var connection = new SqlConnection(connectionString);
         builder.ConfigureTestServices(services =>
         {
             services.RemoveAll(typeof(IDbConnection));
             services.AddTransient<IDbConnection>((sp) =>
-                _dbConnection);
+                connection);
         });
     }
+
+
     
 }

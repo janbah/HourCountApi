@@ -20,13 +20,6 @@ public class WorkingTimeController : ControllerBase
         _workingTimeManager = workingTimeManager;
         _adapter = adapter;
     }
-
-    // [HttpGet]
-    // [Route("GetAll")]
-    // public List<WorkingTime> GetAll()
-    // {
-    //     return _workingTimeManager.GetAll().ToList();
-    // }
     
     [HttpGet]
     [Route("{id}")]
@@ -43,7 +36,6 @@ public class WorkingTimeController : ControllerBase
     }
 
     [HttpPost]
-    [Route("WorkingTime")]
     public async Task<ActionResult> InsertWorkingTime(WorkingTimeDto workingTimeDto)
     {
         try
