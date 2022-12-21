@@ -19,13 +19,10 @@ public class WorkingTimeSumController
         _workingTimeManager = workingTimeManager;
     }
     
+    [HttpGet]
     public IEnumerable<WorkingTimeSum> GetWorkingTimeSums(int employeeId)
     {
         var workingTimeSums = _workingTimeManager.GetWorkingTimeSums(employeeId);
         return workingTimeSums;
     }
-
-    
-    
-    
 }

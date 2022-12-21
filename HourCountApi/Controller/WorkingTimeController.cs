@@ -81,11 +81,4 @@ public class WorkingTimeController : ControllerBase
             return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting workingTime record");
         } 
     }
-    
-    [HttpGet]
-    [Route("WorkingTimeSum")]
-    public IEnumerable<WorkingTimeSum> GetWorkingTimeSum()
-    {
-        return this._workingTimeManager.GetWorkingTimeSums(1);
-    }
 }
