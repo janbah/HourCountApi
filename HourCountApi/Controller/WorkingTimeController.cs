@@ -7,7 +7,6 @@ using WorkingTimeManagement;
 namespace HourCountApi.Controller;
 
 [ApiController]
-
 [Route("api/working-times")]
 public class WorkingTimeController : ControllerBase
 {
@@ -87,6 +86,6 @@ public class WorkingTimeController : ControllerBase
     [Route("WorkingTimeSum")]
     public IEnumerable<WorkingTimeSum> GetWorkingTimeSum()
     {
-        return this._workingTimeManager.GetWorkingTimeOverView(1);
+        return this._workingTimeManager.GetWorkingTimeSums(1);
     }
 }

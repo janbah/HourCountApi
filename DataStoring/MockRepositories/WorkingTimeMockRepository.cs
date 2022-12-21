@@ -107,9 +107,6 @@ public class WorkingTimeMockRepository : IRepository<WorkingTime>
     public int Insert(WorkingTimeDto workingTimeDto)
     {
         Console.WriteLine("Insert to Datastore");
-        // WorkingTime wt = new();
-        // wt.Id = workingTimes.Count + 1;
-        // wt.TimeEntry = Convert.ToDecimal(workingTimeDto.TimeEntry);
         return 1;
     }
 

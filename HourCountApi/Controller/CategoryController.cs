@@ -5,7 +5,7 @@ using WorkingTimeManagement;
 namespace HourCountApi.Controller;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/categories")]
 
 public class CategoryController : ControllerBase
 {
@@ -17,7 +17,6 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet]
-    [Route("Category")]
     public IEnumerable<Category> GetCategories()
     {
         return _workingTimeManager.GetCategoryItems();

@@ -32,7 +32,7 @@ public class WorkingTimeManager : IWorkingTimeManager
             .ToList();
     }
 
-    public List<WorkingTimeSum> GetWorkingTimeOverView(int employeeId)
+    public List<WorkingTimeSum> GetWorkingTimeSums(int employeeId)
     {
         var result = _workingTimeRepo.Load()
             .Where(w=>w.Employee.Id == employeeId)
@@ -70,7 +70,7 @@ public class WorkingTimeManager : IWorkingTimeManager
 
     public WorkingTime GetWorkingTime(int id)
     {
-        
-        return _workingTimeRepo.Load().FirstOrDefault(w => w.Id == id) ?? throw new InvalidOperationException();
+        string error = string.Format("working-time data with id {0} not found",id);
+        return _workingTimeRepo.Load().FirstOrDefault(w => w.Id == id) ?? throw new Exception(error);
     }
 }

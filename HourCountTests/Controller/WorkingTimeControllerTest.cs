@@ -3,28 +3,25 @@ using CrossCutting.DataObjects;
 using CrossCutting.DataTransferObjects;
 using Newtonsoft.Json;
 
-namespace HourCountTests.WorkingTimeController;
+namespace HourCountTests.Controller;
 
 [TestClass]
 public class WorkingTimeControllerTest
 {
     private readonly HttpClient _client;
-    private readonly Database _database;
-
 
     public WorkingTimeControllerTest()
     {
         var api = new CustomWorkingTimeApiFactory();
         _client = api.Client;
-        _database = new Database();
-        //_database.ResetDatabase();
     }
     
 
     [TestCleanup]
     public void CleanUp()
     {
-      _database.ResetDatabase();
+        Database database = new Database();
+        database.ResetDatabase();
     }
     
 
@@ -77,11 +74,10 @@ public class WorkingTimeControllerTest
         
         //Act
         var response = await _client.GetAsync("api/working-times/10");
-        var stringResult = await response.Content.ReadAsStringAsync();
-        var workingTime = JsonConvert.DeserializeObject<WorkingTime>(stringResult);
+        var content = await response.Content.ReadAsStringAsync();
         
         //Assert
-        Assert.IsNull(workingTime);
+        Assert.IsTrue(content.Contains("working-time data with id 10 not found"));
     }
     
     [TestMethod]
@@ -139,7 +135,7 @@ public class WorkingTimeControllerTest
         await _client.PostAsJsonAsync("api/working-times", workingTimeDto );
 
         //Assert
-        Database database = new Database();
+        var database = new Database();
         var result = database.GetWorkingTimes().Last();
         Assert.AreEqual((decimal)4.5,result.TimeEntry);
     }
@@ -164,7 +160,7 @@ public class WorkingTimeControllerTest
         await _client.PutAsJsonAsync("api/working-times", workingTimeDto );
 
         //Assert
-        Database database = new Database();
+        var database = new Database();
         var result = database.GetWorkingTimes().First(wt => wt.Id == 1);
         Assert.AreEqual(2,result.Employee.Id);
         Assert.AreEqual(2,result.Category.Id);

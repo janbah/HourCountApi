@@ -5,7 +5,7 @@ using WorkingTimeManagement;
 namespace HourCountApi.Controller;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/projects")]
 
 public class ProjectController: ControllerBase
 {
@@ -17,7 +17,6 @@ public class ProjectController: ControllerBase
     }
 
     [HttpGet]
-    [Route("Project")]
     public IQueryable<Project> GetProjects()
     {
        return _workingTimeManager.GetProjectItems();
