@@ -10,10 +10,10 @@ public class Project
         get
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Customer.LongName);
-            sb.Append(" - ");
+            sb.Append(Customer.Name);
+            sb.Append("-");
             sb.Append(Fair.Name );
-            sb.Append(" - ");
+            sb.Append("-");
             sb.Append(Fair.StartDate.Year.ToString());
     
             return sb.ToString();

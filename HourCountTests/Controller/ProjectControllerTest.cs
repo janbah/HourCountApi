@@ -38,5 +38,49 @@ public class ProjectControllerTest
         Assert.AreEqual(2,projects.Count);
     }
     
+    [TestMethod]
+    public async Task GetProjects_Returns_Fair()
+    {
+        //Arrange
+        
+        //Act
+        var response = await _client.GetAsync("api/projects");
+        var stringResult = await response.Content.ReadAsStringAsync();
+        var projects = JsonConvert.DeserializeObject<List<Project>>(stringResult);
+        
+        //Assert
+        var project = projects[0];
+        Assert.IsNotNull(project.Fair);
+    }
+    
+    [TestMethod]
+    public async Task GetProjects_Returns_Customer()
+    {
+        //Arrange
+        
+        //Act
+        var response = await _client.GetAsync("api/projects");
+        var stringResult = await response.Content.ReadAsStringAsync();
+        var projects = JsonConvert.DeserializeObject<List<Project>>(stringResult);
+        
+        //Assert
+        var project = projects[0];
+        Assert.IsNotNull(project.Customer);
+    }
+    
+    [TestMethod]
+    public async Task GetProjects_Returns_ValidProjectName()
+    {
+        //Arrange
+        
+        //Act
+        var response = await _client.GetAsync("api/projects");
+        var stringResult = await response.Content.ReadAsStringAsync();
+        var projects = JsonConvert.DeserializeObject<List<Project>>(stringResult);
+        
+        //Assert
+        var project = projects[0];
+        Assert.AreEqual("Cust 1-HMI-2022",project.Name);
+    }
 
 }

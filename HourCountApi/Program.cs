@@ -18,8 +18,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IRepository<WorkingTime>,WorkingTimeRepository>();
 builder.Services.AddTransient<IRepository<Customer>, CustomerMockRepository>();
 builder.Services.AddTransient<IRepository<Fair>, FairMockRepository>();
-builder.Services.AddTransient<IRepository<Project>,ProjectMockRepository>();
-builder.Services.AddTransient<IRepository<Category>,CategoryMockRepository>();
+builder.Services.AddTransient<IRepository<Project>,ProjectRepository>();
+builder.Services.AddTransient<IRepository<Category>,CategoryRepository>();
 builder.Services.AddTransient<IWorkingTimeManager,WorkingTimeManager>();
 builder.Services.AddTransient<WorkingTimeAdapter>();
 

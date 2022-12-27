@@ -1,6 +1,7 @@
 using System.Net.Http.Json;
 using CrossCutting.DataObjects;
 using CrossCutting.DataTransferObjects;
+using HourCountApi.ViewModels;
 using Newtonsoft.Json;
 
 namespace HourCountTests.Controller;
@@ -40,6 +41,23 @@ public class WorkingTimeControllerTest
     }
     
     [TestMethod]
+    public async Task GetWorkingTimes_employeeId1_2022_12_14_ReturnsProjectName()
+    {
+        //Arrange
+        
+        //Act
+        var response = await _client.GetAsync("api/working-times?employeeID=1&SelectedDate=2022-12-14");
+        var stringResult = await response.Content.ReadAsStringAsync();
+        var workingTimes = JsonConvert.DeserializeObject<List<WorkingTimeViewModel>>(stringResult);
+        
+        //Assert
+        Assert.IsTrue(0 < workingTimes.Count);
+        Assert.AreEqual("Cust 1-HMI-2022", workingTimes[0].ProjectName);
+        
+    }
+
+    
+    [TestMethod]
     public async Task GetWorkingTimes_employeeId0_2022_12_14_ReturnsNoData()
     {
         //Arrange
@@ -66,6 +84,8 @@ public class WorkingTimeControllerTest
         //Assert
         Assert.AreEqual(4, workingTime.Id);
     }
+    
+    
     
     [TestMethod]
     public async Task GetWorkingTime_id_10_ReturnsNoData()

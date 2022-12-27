@@ -55,6 +55,8 @@ public class WorkingTimeManager : IWorkingTimeManager
 
     public int Add(WorkingTimeDto workingTimeDto)
     {
+        //adding offset for getting the right date from input
+        workingTimeDto.Date = workingTimeDto.Date.Value.AddHours(2);
         return _workingTimeRepo.Insert(workingTimeDto);
     }
 

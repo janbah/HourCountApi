@@ -17,7 +17,7 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
 
     public IQueryable<WorkingTime> Load()
     {
-        var workingTimes = new List<WorkingTime>();
+        List<WorkingTime> workingTimes;
         using (_connection)
         {
             string sql = @"select
@@ -60,7 +60,6 @@ public class WorkingTimeRepository : IRepository<WorkingTime>
             inner join customer c2 on c2.id = p.customer_id
             inner join fair f on f.id = p.fair_id";
 
-           // workingTimes = (List<WorkingTime>)_connection.Query(sql);
 
              workingTimes = (List<WorkingTime>)_connection.Query<WorkingTime,Employee, Category, Project, Customer, Fair, WorkingTime>(
                  sql, 

@@ -6,7 +6,11 @@
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7603df78_002D969a_002D4f8a_002D9792_002D31609975a65e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="InsertWorkingTime_EntryIsInserted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.WorkingTimeSumControllerTest.GetWorkingTimes_employeeId1_2022_12_14_ReturnsData&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.WorkingTimeControllerTest&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.ProjectControllerTest.GetProjects_ReturnsData&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.ProjectControllerTest.GetProjects_Returns_Fair&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.ProjectControllerTest.GetProjects_Returns_Customer&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::3B324700-A0D0-4D87-A955-8471CBDDFFDF::net6.0::HourCountTests.Controller.ProjectControllerTest.GetProjects_Returns_ValidProjectName&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Enercon/@EntryIndexedValue">True</s:Boolean>

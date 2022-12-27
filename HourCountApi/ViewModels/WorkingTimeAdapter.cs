@@ -11,7 +11,7 @@ public class WorkingTimeAdapter
             Id = workingTime.Id,
             Date = workingTime.Date,
             TimeEntry = workingTime.TimeEntry,
-            ProjectName = "",//workingTime.Project.Name,
+            ProjectName = workingTime.Project.Name,
             CategoryName = workingTime.Category.Name,
             Comment = workingTime.Comment
         };
