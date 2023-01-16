@@ -38,6 +38,7 @@ public class WorkingTimeManager : IWorkingTimeManager
             .Where(w=>w.Employee.Id == employeeId)
             .GroupBy(w => w.Date
                 , (date, entry) => new WorkingTimeSum(date, entry.Sum(e=>e.TimeEntry)))
+            .OrderByDescending(x=>x.Date)
             .ToList();
         
         return result;    

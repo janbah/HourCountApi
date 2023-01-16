@@ -29,10 +29,10 @@ public class WorkingTimeController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<WorkingTimeViewModel> GetWorkingTimes(int employeeId, DateTime selectedDate)
+    public IEnumerable<WorkingTime> GetWorkingTimes(int employeeId, DateTime selectedDate)
     {
         var workingTimes = _workingTimeManager.GetWorkingTimesByDate(selectedDate, employeeId);
-        return _adapter.ToWorkingTimeViewModels(workingTimes);
+        return workingTimes;
     }
 
     [HttpPost]
@@ -41,7 +41,7 @@ public class WorkingTimeController : ControllerBase
         try
         {
             int id = _workingTimeManager.Add(workingTimeDto);
-            return Task.FromResult<ActionResult>(CreatedAtAction(nameof(GetWorkingTime), new { id, workingTimeDto }));
+            return Task.FromResult<ActionResult>(StatusCode(StatusCodes.Status201Created, new JsonResult(id)));
         }
         
         catch (Exception)
@@ -68,13 +68,13 @@ public class WorkingTimeController : ControllerBase
     
     [HttpDelete]
     [Route("{id}")]
-
     public ActionResult DeleteWorkingTime(int id)
     {
         try
         {
+            string result = "test";
             _workingTimeManager.Delete(id);
-            return StatusCode(StatusCodes.Status202Accepted, "Deleting workingTime record");
+            return StatusCode(StatusCodes.Status202Accepted, new JsonResult(result));
         }
         catch (Exception)
         {
